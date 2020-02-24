@@ -10,8 +10,6 @@ class TestDurak:
 
         print('Test started')
 
-
-
     def teardown(self):
 
         print('Test finished')
