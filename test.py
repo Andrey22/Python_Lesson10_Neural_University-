@@ -1,5 +1,4 @@
 from main import Durak
-
 import pytest
 
 class TestDurak:
@@ -14,8 +13,6 @@ class TestDurak:
 
         print('Test finished')
 
-
-
     def test_cards_num(self):
 
         durak_game = Durak
@@ -23,8 +20,6 @@ class TestDurak:
         durak_game.all_cards(Durak)
 
         assert len(durak_game.cards) == 36
-
-
 
     def test_cards_in_hand(self):
 
@@ -37,8 +32,6 @@ class TestDurak:
         assert len(durak_game.player_cards) == 6
 
         assert len(durak_game.comp_cards) == 6
-
-
 
     def test_similar_cards(self):
 
@@ -56,13 +49,9 @@ class TestDurak:
 
             set_player.add(durak_game.player_cards[i][0])
 
-
-
         for i in range(len(durak_game.comp_cards)):
 
             set_player.add(durak_game.comp_cards[i][0])
-
-
 
         assert set_player.isdisjoint(set_comp) == True
 
